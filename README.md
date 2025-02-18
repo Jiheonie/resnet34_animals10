@@ -7,7 +7,8 @@
 Here is my python source code for ResNet-34 model - the model that won the the first prize ILSVRC and COCO 2015
 
 ## Dataset
-The dataset used for training my model could be found at [Animals-10] https://www.kaggle.com/datasets/alessiocorrado99/animals10 or could be download by **python download_dataset.py**
+* The dataset used for training my model could be found at [Animals-10] https://www.kaggle.com/datasets/alessiocorrado99/animals10 
+* Or could be download by **python download_dataset.py**
 
 ## Categories
 The table below shows 10 categories my model used:
@@ -29,8 +30,8 @@ After the raw dataset has been downloaded, you need to split dataset into traini
 ## Experiments
 The loss on training set and accuracy on test set curves for the experiment are shown below:
 
-<img src="demo/train_loss.png" width="800"> 
-<img src="demo/val_acc.png" width="800"> 
+<img src="demo/train_loss.jpg" width="800"> 
+<img src="demo/val_acc.jpg" width="800"> 
 
 The confusion matrix of validate set are shown below:
 <img src="demo/confusion_matrix.png" width="800"> 

@@ -20,6 +20,7 @@ def get_args():
   parser.add_argument("--root", '-r', type=str, default='dataset')
   parser.add_argument("--epochs", '-e', type=int, default=500, help="Num of epoch")
   parser.add_argument("--batch_size", '-b', type=int, default=64, help="Batch size")
+  parser.add_argument("--num_classes", '-n', type=int, default=10)
   parser.add_argument("--image_size", '-i', type=int, default=224)
   parser.add_argument("--logging", '-l', type=str, default="tensorboard", help="Logging")
   parser.add_argument("--trained_models", '-m', type=str, default="trained_models")
@@ -96,7 +97,7 @@ if __name__ == '__main__':
   writer = SummaryWriter(args.logging)
 
   # ------------------------define models and load weights---------------------
-  model = ResNetModel(10, 3).to(device=device)
+  model = ResNetModel(args.num_classes, 3).to(device=device)
   criterion = nn.CrossEntropyLoss()
   optimizer = SGD(model.parameters(), lr=1e-3, momentum=0.9) # momentum min = 0.9
   if args.checkpoint:

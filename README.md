@@ -25,7 +25,8 @@ The table below shows 10 categories my model used:
 You could find my trained model at **trained_models/best_resnet34.pt**
 
 ## Training
-After the raw dataset has been downloaded, you need to split dataset into training/test sets with ration 8:2 by simply run **dataset.py**.
+* After the raw dataset has been downloaded, you need to split dataset into training/validate sets with ration 8:2 by run **dataset.py**.
+* Then you could simply run **python train_nn.py**
 
 ## Experiments
 The loss on training set and accuracy on test set curves for the experiment are shown below:
@@ -36,6 +37,11 @@ The loss on training set and accuracy on test set curves for the experiment are 
 The confusion matrix of validate set are shown below:
 <img src="demo/confusion_matrix.png" width="800"> 
 
+# Testing
+After completing model training, we can put the model into practical use by run 
+**python test_nn.py -p [file path]**
+
+<img src="demo/test.jpg" width="400"> 
 
 ## Requirements
 * **python 3.11**
